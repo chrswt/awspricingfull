@@ -1057,7 +1057,7 @@ class ELCPrices(AWSPrices):
                 name="ELC_reserved_pricing.csv"
             data = self.get_reserved_instances_prices()
             writer = csv.writer(open(path+name, 'wb'))
-            print "region,type,utilization,term,price,upfront"
+            print("region,type,utilization,term,price,upfront")
             writer.writerow(["region","type","utilization","term","price","upfront"])
             for r in data["regions"]:
                 region_name = r["region"]
