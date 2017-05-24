@@ -3434,7 +3434,7 @@ class AllAWSPrices(AWSPrices):
                                                                       "",
                                                                       "",
                                                                       self.none_as_string(it["price"]),
-                                                                      "")
+                                                                      ""))
                     writer.writerow(["ondemand",
                                       "rds",
                                       region_name, 
