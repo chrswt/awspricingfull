@@ -51,7 +51,7 @@ Updated: Feb 14, 2017
 """
 
 
-import urllib2
+import requests
 import csv
 import re
 try:
@@ -135,7 +135,7 @@ class AWSPrices(object):
                
         """
           
-        f = urllib2.urlopen(url).read()
+        f = requests.get(url).text()
         f = re.sub("/\\*[^\x00]+\\*/", "", f, 0, re.M)
         f = re.sub("([a-zA-Z0-9]+):", "\"\\1\":", f)
         f = re.sub(";", "\n", f)
