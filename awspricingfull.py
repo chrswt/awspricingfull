@@ -135,7 +135,7 @@ class AWSPrices(object):
                
         """
           
-        f = requests.get(url).text()
+        f = requests.get(url).text
         f = re.sub("/\\*[^\x00]+\\*/", "", f, 0, re.M)
         f = re.sub("([a-zA-Z0-9]+):", "\"\\1\":", f)
         f = re.sub(";", "\n", f)
